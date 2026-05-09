@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Map-Art Store Inc.</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.contact-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: flex-start; }
+.contact-info { position: sticky; top: 100px; }
+.contact-info h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+.contact-method { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+.contact-method-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--cream); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+.contact-method h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.2rem; color: var(--dark); }
+.contact-method p { font-size: 0.825rem; }
+.contact-method a:hover { color: var(--accent); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.success-msg { background: #D4EAD8; border: 1px solid #a8d1b0; color: #2A4A2E; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; }
+.error-msg { background: rgba(212,98,42,0.1); border: 1px solid rgba(212,98,42,0.3); color: var(--accent); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem; font-size: .875rem; }
+.form-wrapper { background: white; border-radius: 20px; padding: 2.5rem; border: 1px solid var(--border); box-shadow: 0 8px 40px var(--shadow); }
+.captcha-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.captcha-img { border-radius: 8px; border: 1px solid var(--border); cursor: pointer; height: 50px; }
+.captcha-input { flex: 1; }
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } .contact-info { position: static; } }
+@media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+    </div>
+    Map-Art Store
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    <li><a href="contact_zh.html" class="lang-switch" title="切换中文">🌐 中文</a></li>
+  </ul>
+</nav>
+
+<script src="js/main.js"></script>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label">Get in Touch</div>
+    <h1>Let's Start<br>a Conversation</h1>
+    <p>Whether you're interested in ordering a custom map, exploring a corporate partnership, or learning more about our products — we'd love to hear from you.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- LEFT: INFO -->
+      <div class="contact-info">
+        <div class="section-label">Contact Information</div>
+        <h2>We're Based in<br>Winnipeg, Canada</h2>
+        <p style="margin-top:.75rem;line-height:1.9">Reach out for product orders, wholesale inquiries, or career opportunities. We typically respond within 1–2 business days.</p>
+
+        <div style="margin-top:2rem">
+          <div class="contact-method">
+            <div class="contact-method-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:info@map-artstore.ca">info@map-artstore.ca</a></p>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>Winnipeg, Manitoba<br>Canada</p>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-icon">⏰</div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday – Friday<br>9:00 AM – 5:00 PM CST</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;background:var(--dark);border-radius:14px;padding:1.75rem">
+          <div style="font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,0.4);margin-bottom:1rem">Quick Links</div>
+          
+          <a href="products.html" style="display:flex;gap:.75rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid rgba(245,240,232,0.08);text-decoration:none">
+            <span style="font-size:1.1rem;flex-shrink:0">🎁</span>
+            <div>
+              <div style="font-weight:600;font-size:.875rem;color:var(--cream)">Order a Custom Map</div>
+              <div style="font-size:.78rem;color:rgba(245,240,232,0.4)">Personalised map for home or as a gift</div>
+            </div>
+          </a>
+          
+          <a href="products.html#corporate" style="display:flex;gap:.75rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid rgba(245,240,232,0.08);text-decoration:none">
+            <span style="font-size:1.1rem;flex-shrink:0">🏢</span>
+            <div>
+              <div style="font-weight:600;font-size:.875rem;color:var(--cream)">Corporate Orders</div>
+              <div style="font-size:.78rem;color:rgba(245,240,232,0.4)">Wholesale pricing and corporate gift packages</div>
+            </div>
+          </a>
+          
+          <a href="careers.html" style="display:flex;gap:.75rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid rgba(245,240,232,0.08);text-decoration:none">
+            <span style="font-size:1.1rem;flex-shrink:0">💼</span>
+            <div>
+              <div style="font-weight:600;font-size:.875rem;color:var(--cream)">Career Opportunities</div>
+              <div style="font-size:.78rem;color:rgba(245,240,232,0.4)">View all open positions</div>
+            </div>
+          </a>
+          
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div>
+        <div class="form-wrapper">
+          <h3 style="font-size:1.4rem;margin-bottom:.4rem">Send Us a Message</h3>
+          <p style="font-size:.875rem;margin-bottom:2rem">All fields marked <span style="color:var(--accent)">*</span> are required.</p>
+
+          <form method="POST" action="contact.html" novalidate>
+            <div class="form-group">
+              <label for="inquiry_type">Inquiry Type <span style="color:var(--accent)">*</span></label>
+              <select name="inquiry_type" id="inquiry_type" required>
+                <option value="order">Custom Map Order</option>
+                <option value="wholesale">Wholesale / Corporate Enquiry</option>
+                <option value="careers">Careers</option>
+                <option value="cofounder">Co-Founder Role</option>
+                <option value="press">Press &amp; Media</option>
+                <option value="general">General Enquiry</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span style="color:var(--accent)">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span style="color:var(--accent)">*</span></label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (204) 555-0100">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject <span style="color:var(--accent)">*</span></label>
+                <input type="text" id="subject" name="subject" placeholder="e.g. Custom map for my cabin" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span style="color:var(--accent)">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell us what you're looking for — the more detail the better!" required></textarea>
+            </div>
+
+            <!-- CAPTCHA -->
+            <div class="form-group">
+              <label>Verification Code <span style="color:var(--accent)">*</span></label>
+              <div class="captcha-row">
+                <img src="captcha.php" alt="CAPTCHA" id="captchaImg" class="captcha-img" title="Click to refresh">
+                <input type="text" name="captcha" id="captcha" class="captcha-input" placeholder="Enter the code above" required autocomplete="off" maxlength="6">
+              </div>
+              <p style="font-size:.75rem;color:var(--text-muted);margin-top:.3rem">Click the image to get a new code.</p>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem">
+              <input type="checkbox" id="consent" name="consent" required style="width:auto">
+              <label for="consent" style="font-size:.82rem;font-weight:400;cursor:pointer">I agree to be contacted by Map-Art Store Inc. in response to this inquiry.</label>
+            </div>
+
+            <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center;font-size:1rem;padding:1rem">
+              Send Message →
+            </button>
+
+            <p style="font-size:.75rem;color:var(--text-muted);text-align:center;margin-top:1rem">
+              We respect your privacy. Your information will never be shared with third parties.
+            </p>
+          </form>
+          </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--cream)">
+  <div class="container" style="max-width:800px">
+    <div class="section-label">FAQ</div>
+    <h2>Common Questions</h2>
+    <div style="margin-top:2rem">
+            <details style="border-bottom:1px solid var(--border);padding:1.25rem 0" open>
+        <summary style="font-weight:700;font-size:.95rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;color:var(--dark)">How do I order a custom map? <span>+</span></summary>
+        <p style="margin-top:.75rem;font-size:.875rem;line-height:1.8">Browse our product range on the Products page and contact us to place an order. Our online ordering system is currently launching — contact us directly and we'll walk you through the process.</p>
+      </details>
+      <details style="border-bottom:1px solid var(--border);padding:1.25rem 0">
+        <summary style="font-weight:700;font-size:.95rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;color:var(--dark)">What wood types are available? <span>+</span></summary>
+        <p style="margin-top:.75rem;font-size:.875rem;line-height:1.8">We currently offer Birch and Red Oak plywood, sourced from Winsor Plywood in Winnipeg. Birch gives high-contrast engravings; Red Oak offers warm, classic tones.</p>
+      </details>
+      <details style="border-bottom:1px solid var(--border);padding:1.25rem 0">
+        <summary style="font-weight:700;font-size:.95rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;color:var(--dark)">What sizes do you offer? <span>+</span></summary>
+        <p style="margin-top:.75rem;font-size:.875rem;line-height:1.8">Maps are available in Small (17×12 inches), Medium (21×15 inches), and Large (30×21 inches) for both Birch and Red Oak.</p>
+      </details>
+      <details style="border-bottom:1px solid var(--border);padding:1.25rem 0">
+        <summary style="font-weight:700;font-size:.95rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;color:var(--dark)">How accurate is the preview? <span>+</span></summary>
+        <p style="margin-top:.75rem;font-size:.875rem;line-height:1.8">Very accurate. Our beta trial showed customers consistently impressed by how closely the finished map matched the on-screen 3D render.</p>
+      </details>
+      <details style="border-bottom:1px solid var(--border);padding:1.25rem 0">
+        <summary style="font-weight:700;font-size:.95rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;color:var(--dark)">Do you ship internationally? <span>+</span></summary>
+        <p style="margin-top:.75rem;font-size:.875rem;line-height:1.8">Currently we serve Canada primarily, with US shipping available. Contact us to discuss international shipping options.</p>
+      </details>
+      <details style="border-bottom:1px solid var(--border);padding:1.25rem 0">
+        <summary style="font-weight:700;font-size:.95rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;color:var(--dark)">What's the turnaround time? <span>+</span></summary>
+        <p style="margin-top:.75rem;font-size:.875rem;line-height:1.8">Typically 5–10 business days from order confirmation to delivery. Rush orders may be available — contact us to discuss.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--cream)">Map-Art Store Inc.</div>
+        <p>Bridging distances through intricately designed, personalised geographical engravings &mdash; handcrafted in Winnipeg, Manitoba, Canada.</p>
+        <p class="tagline">"Encapsulating memories through geography."</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="technology.html">Our Technology</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html#diy">DIY Kits</a></li>
+          <li><a href="products.html#premium">Premium Maps</a></li>
+          <li><a href="products.html#corporate">Corporate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="mailto:info@map-artstore.ca">info@map-artstore.ca</a></li>
+          <li><a href="#">Winnipeg, Manitoba</a></li>
+          <li><a href="#">Canada</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Map-Art Store Inc. All rights reserved.</p>
+      <p>Made with ♥ in Winnipeg, Manitoba, Canada</p>
+    </div>
+  </div>
+</footer>
+</div>
+<script>
+document.getElementById('captchaImg').addEventListener('click', function() {
+  this.src = 'captcha.php?t=' + Date.now();
+});
+</script>
+</body>
+</html>

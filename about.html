@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Map-Art Store Inc.</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.team-card { background: white; border-radius: 16px; border: 1px solid var(--border); overflow: hidden; }
+.team-card-header { background: var(--dark); padding: 2.5rem 2rem 1.5rem; position: relative; }
+.team-card-header::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 30px;
+  background: white; clip-path: ellipse(60% 100% at 50% 100%);
+}
+.team-avatar {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--wood); display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--cream);
+  border: 3px solid var(--gold-light); margin-bottom: 1rem;
+}
+.team-card-body { padding: 1.5rem; }
+.team-card-body h3 { font-size: 1.15rem; margin-bottom: 0.25rem; }
+.team-card-body .title { font-size: 0.8rem; color: var(--accent); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1rem; text-transform: uppercase; }
+.team-card-body ul { list-style: none; }
+.team-card-body ul li { font-size: 0.83rem; color: var(--text-muted); padding: 0.35rem 0; border-bottom: 1px solid var(--cream); display: flex; gap: 0.5rem; align-items: flex-start; }
+.team-card-body ul li::before { content: '→'; color: var(--wood-light); flex-shrink: 0; margin-top: 0.05rem; }
+
+.advisors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.advisor-card { background: var(--cream); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); }
+.advisor-card h4 { margin-bottom: 0.25rem; }
+.advisor-card p { font-size: 0.85rem; }
+
+.values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+.value-card { padding: 2rem; background: white; border-radius: 12px; border: 1px solid var(--border); }
+.value-icon { font-size: 2rem; margin-bottom: 1rem; }
+.value-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+.timeline { margin-top: 3rem; position: relative; padding-left: 2.5rem; }
+.timeline::before { content: ''; position: absolute; left: 0.5rem; top: 0; bottom: 0; width: 2px; background: var(--border); }
+.timeline-item { position: relative; margin-bottom: 2rem; }
+.timeline-item::before { content: ''; position: absolute; left: -2.15rem; top: 0.35rem; width: 12px; height: 12px; border-radius: 50%; background: var(--wood); border: 2px solid var(--warm-white); }
+.timeline-item .year { font-size: 0.78rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.25rem; }
+.timeline-item h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+.timeline-item p { font-size: 0.85rem; }
+
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: 1fr; }
+  .advisors-grid { grid-template-columns: 1fr 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) { .advisors-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+    </div>
+    Map-Art Store
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    <li>
+      <a href="about_zh.html" class="lang-switch" title="切换中文">🌐 中文</a>
+    </li>
+  </ul>
+</nav>
+
+<script src="js/main.js"></script>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label">Our Story</div>
+    <h1>Built on a Love<br>for Maps &amp; Craft</h1>
+    <p>Map-Art Store was founded with a single mission: to make personalised, high-quality laser-engraved maps accessible to everyone — powered by technology that lets you see your vision before it's made.</p>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
+      <div>
+        <div class="section-label">Mission &amp; Vision</div>
+        <h2>More Than Décor —<br>It's a Connection</h2>
+        <p style="margin-top:1rem;line-height:1.9">Maps carry memory. The neighbourhood where you grew up, the city where you fell in love, the cabin on the lake your family visits every summer. We believe those places deserve to be celebrated and displayed.</p>
+        <p style="margin-top:1rem;line-height:1.9">Our technology allows buyers to move from concept to a custom, real-time rendered product in minutes — a self-serve experience that feels closer to Amazon than to the traditional custom-craft marketplace.</p>
+        <div style="margin-top:2rem;padding:1.5rem;background:var(--cream);border-radius:12px;border-left:4px solid var(--wood)">
+          <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;color:var(--dark);line-height:1.7">"To bridge distances by encapsulating memories through intricately designed, personalised geographical engravings, fostering a connection between people and places."</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.75rem;font-weight:600">— Map-Art Store Mission Statement</div>
+        </div>
+      </div>
+      <div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div style="background:var(--dark);padding:2rem;border-radius:12px;color:var(--cream)">
+            <div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--gold-light);line-height:1">$200K</div>
+            <div style="font-size:0.8rem;color:rgba(245,240,232,0.5);margin-top:0.4rem">Invested in Manitoba economy</div>
+          </div>
+          <div style="background:var(--accent);padding:2rem;border-radius:12px;color:white">
+            <div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:white;line-height:1">10+</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:0.4rem">Full-time jobs by 2028</div>
+          </div>
+          <div style="background:var(--cream);padding:2rem;border-radius:12px;border:1px solid var(--border)">
+            <div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--wood);line-height:1">100%</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.4rem">Canadian IP ownership</div>
+          </div>
+          <div style="background:var(--green);padding:2rem;border-radius:12px;color:white">
+            <div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:white;line-height:1">2024</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:0.4rem">Commercial launch year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div class="section-label">Leadership</div>
+    <h2>The People Behind the Maps</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">F</div>
+        </div>
+        <div class="team-card-body">
+          <h3>Fu Zhaoxia</h3>
+          <div class="title">Co-Founder &amp; Chief Strategy Officer</div>
+          <ul>
+            <li>10 years as Associate Chief Researcher, Department of Tourism, Hainan, China</li>
+            <li>2 years as Assistant Researcher, Domestic Marketing Development</li>
+            <li>3 years Editor &amp; English Interpreter, Haikou Radio &amp; TV Station</li>
+            <li>Master's Degree, China University of Political Science &amp; Law (2004)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-header" style="background:var(--wood)">
+          <div class="team-avatar" style="background:var(--dark)">Z</div>
+        </div>
+        <div class="team-card-body">
+          <h3>Zhao Cuicui</h3>
+          <div class="title">Co-Founder &amp; Chief Financial Officer</div>
+          <ul>
+            <li>6 years as CFO, Beijing Qiancheng Meishu Real Estate Consulting Co.</li>
+            <li>3 years as Accountant, Jiuzhou Book City</li>
+            <li>Diploma in Law, Liaoning University (2018)</li>
+            <li>Diploma in Administration, The Open University of China (2015)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-header" style="background:var(--accent)">
+          <div class="team-avatar" style="background:var(--dark);border-color:white">?</div>
+        </div>
+        <div class="team-card-body">
+          <h3>Third Co-Founder</h3>
+          <div class="title" style="color:var(--accent)">Currently Recruiting · Manitoba</div>
+          <ul>
+            <li>Local to Manitoba, Winnipeg preferred</li>
+            <li>Strong technical and marketing skills</li>
+            <li>Lead commercial launch of flagship products in 2024</li>
+            <li>Run day-to-day business operations</li>
+          </ul>
+          <a href="careers.html" class="btn btn-accent" style="margin-top:1rem;font-size:0.8rem;padding:0.5rem 1rem">View Position →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVISORS -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Advisory Team</div>
+    <h2>Guided by Experience</h2>
+    <p style="max-width:600px;margin-top:.5rem">Our advisory team brings deep expertise in technology, entrepreneurship, and product development.</p>
+    <div class="advisors-grid">
+      <div class="advisor-card">
+        <div style="width:44px;height:44px;background:var(--dark);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-weight:700;font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:1rem">CF</div>
+        <h4>Casey Forsyth</h4>
+        <p style="color:var(--accent);font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">CEO, FeedFlo Ltd.</p>
+        <p style="font-size:0.85rem">Strategic business advisor with extensive experience scaling technology companies in the Canadian market.</p>
+      </div>
+      <div class="advisor-card">
+        <div style="width:44px;height:44px;background:var(--wood);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--cream);font-weight:700;font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:1rem">JF</div>
+        <h4>James Firth</h4>
+        <p style="color:var(--accent);font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">CTO, FeedFlo Ltd.</p>
+        <p style="font-size:0.85rem">Technical architecture and software infrastructure advisor. Key contributor to Map-Art Store's rendering technology.</p>
+      </div>
+      <div class="advisor-card">
+        <div style="width:44px;height:44px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:1rem">JE</div>
+        <h4>James Eichele</h4>
+        <p style="color:var(--accent);font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">Director of Technology, Amiron Ventures</p>
+        <p style="font-size:0.85rem">Experienced technology director advising on product development strategy and commercialisation pathway.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div class="section-label">Our Values</div>
+    <h2>What We Stand For</h2>
+    <div class="values-grid">
+      <div class="value-card"><div class="value-icon">🎨</div><h3>Craftsmanship First</h3><p>Every map is a product of precision engineering and genuine craft. We never compromise on quality of materials or the accuracy of our laser-cutting process.</p></div>
+      <div class="value-card"><div class="value-icon">⚡</div><h3>Innovation in UX</h3><p>We believe the custom product experience should be fast, intuitive, and satisfying — not slow and cumbersome. Real-time previews change everything.</p></div>
+      <div class="value-card"><div class="value-icon">🇨🇦</div><h3>Proud to Be Canadian</h3><p>Our team, our IP, our manufacturing, and our hearts are in Winnipeg. Supporting local suppliers and creating Canadian jobs matters to us deeply.</p></div>
+      <div class="value-card"><div class="value-icon">🌿</div><h3>Sustainability Matters</h3><p>We source materials locally to reduce our carbon footprint and explore sustainable, eco-friendly material options as we grow our product range.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section">
+  <div class="container" style="max-width:700px">
+    <div class="section-label">Our Journey</div>
+    <h2>The Map-Art Store Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item"><div class="year">Jan 2021</div><h4>Project Kicks Off</h4><p>Technology development begins with Norima Consulting. First UI prototypes and API architecture designed.</p></div>
+      <div class="timeline-item"><div class="year">Jul 2022</div><h4>Beta Trial Complete</h4><p>20 custom maps ordered and manufactured. Valuable customer feedback collected across 16 beta users.</p></div>
+      <div class="timeline-item"><div class="year">Feb 2023</div><h4>Beta Report Published</h4><p>Comprehensive Final Project Report and Beta Trial Assessment published. Updated software designs delivered.</p></div>
+      <div class="timeline-item"><div class="year">Nov 2023</div><h4>Business Plan Finalised</h4><p>Full commercial business plan completed. Seeking $126,000 in funding to accelerate the 2024 launch.</p></div>
+      <div class="timeline-item"><div class="year">Q1 2024</div><h4>Commercial Launch</h4><p>MVP product launches in Winnipeg, Manitoba. Recruitment of third co-founder underway.</p></div>
+      <div class="timeline-item"><div class="year">2025–2028</div><h4>National &amp; International Expansion</h4><p>Scale across Canada and into the United States. Expand product range to five categories. Target $2.2M revenue by Year 5.</p></div>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--dark);padding:5rem 5%;text-align:center">
+  <div class="container" style="max-width:600px">
+    <h2 style="color:var(--cream)">Join Our Story</h2>
+    <p style="color:rgba(245,240,232,0.6);margin:1rem 0 2rem">We're building something meaningful in Manitoba. Whether as a customer, investor, or team member — we'd love to connect.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="careers.html" class="btn btn-accent">See Open Roles</a>
+      <a href="contact.html" class="btn btn-outline" style="border-color:rgba(245,240,232,0.3);color:var(--cream)">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--cream)">Map-Art Store Inc.</div>
+        <p>Bridging distances through intricately designed, personalised geographical engravings — handcrafted in Winnipeg, Manitoba, Canada.</p>
+        <p class="tagline">"Encapsulating memories through geography."</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="technology.html">Our Technology</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html#diy">DIY Kits</a></li>
+          <li><a href="products.html#premium">Premium Maps</a></li>
+          <li><a href="products.html#corporate">Corporate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="mailto:info@map-artstore.ca">info@map-artstore.ca</a></li>
+          <li><a href="#">Winnipeg, Manitoba</a></li>
+          <li><a href="#">Canada</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Map-Art Store Inc. All rights reserved.</p>
+      <p>Made with ♥ in Winnipeg, Manitoba, Canada</p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

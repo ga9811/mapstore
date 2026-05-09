@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers — Map-Art Store Inc.</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.job-card { background: white; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 1.5rem; overflow: hidden; }
+.job-card-header { padding: 2rem 2rem 1.5rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.job-card-header h3 { font-size: 1.25rem; margin-bottom: 0.3rem; }
+.job-meta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.job-tag { font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.75rem; border-radius: 100px; letter-spacing: 0.05em; }
+.job-tag-featured { background: rgba(212,98,42,0.15); color: var(--accent); }
+.job-tag-loc { background: var(--cream); color: var(--text-muted); }
+.job-tag-type { background: #D4EAD8; color: var(--green); }
+.job-card-body { padding: 0 2rem 2rem; border-top: 1px solid var(--cream); padding-top: 1.5rem; }
+.job-section-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.75rem; }
+.job-list { list-style: none; margin-bottom: 1.5rem; }
+.job-list li { font-size: 0.875rem; padding: 0.35rem 0; color: var(--text-muted); display: flex; gap: 0.6rem; }
+.job-list li::before { content: '→'; color: var(--wood-light); flex-shrink: 0; }
+
+.perks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+.perk-card { background: white; border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); text-align: center; }
+.perk-icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
+.perk-card h4 { font-size: 0.9rem; margin-bottom: 0.3rem; }
+.perk-card p { font-size: 0.8rem; }
+
+@media (max-width: 900px) { .perks-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .perks-grid { grid-template-columns: 1fr; } .job-card-header { flex-direction: column; } }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+    </div>
+    Map-Art Store
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="careers.html" class="active">Careers</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    <li><a href="careers_zh.html" class="lang-switch" title="切换中文">🌐 中文</a></li>
+  </ul>
+</nav>
+
+<script src="js/main.js"></script>
+
+<div class="page-hero" style="background:linear-gradient(135deg,#2E2B25 0%, #1C1A16 100%)">
+  <div class="container">
+    <div class="section-label">Careers</div>
+    <h1>Build the Future<br>of Custom Maps</h1>
+    <p>We're a small team with big ambitions. Based in Winnipeg, Manitoba, we're looking for passionate people to join us as we bring personalised laser-engraved maps to homes and offices across Canada and beyond.</p>
+  </div>
+</div>
+
+<!-- CULTURE -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+      <div>
+        <div class="section-label">Why Map-Art Store?</div>
+        <h2>Small Team.<br>Big Impact.</h2>
+        <p style="margin-top:1rem;line-height:1.9">At Map-Art Store, you won't be a cog in a machine. You'll be a core part of building something genuinely new — a company that combines technology, craftsmanship, and personalisation to create products that people treasure.</p>
+        <p style="margin-top:1rem;line-height:1.9">We're headquartered in Winnipeg, Manitoba, and we're proud to be building a Canadian business, creating Canadian jobs, and contributing to the local economy. We've already invested $200,000 into Manitoba, and we're just getting started.</p>
+        <div style="margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div style="background:var(--cream);padding:1.5rem;border-radius:12px;border:1px solid var(--border)">
+            <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--wood)">2</div>
+            <div style="font-size:.8rem;color:var(--text-muted)">Full-time employees by 2025</div>
+          </div>
+          <div style="background:var(--dark);padding:1.5rem;border-radius:12px">
+            <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--gold-light)">10+</div>
+            <div style="font-size:.8rem;color:rgba(245,240,232,0.5)">Full-time team by 2028</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--cream);border-radius:16px;padding:2.5rem;border:1px solid var(--border)">
+          <h3 style="font-size:1.1rem;margin-bottom:1.5rem">Our Values in Practice</h3>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)">
+            <span style="font-size:1.3rem;flex-shrink:0">🎨</span>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:var(--dark);margin-bottom:.2rem">Craft matters</div>
+              <div style="font-size:.82rem;color:var(--text-muted)">We take pride in the quality of every product we make.</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)">
+            <span style="font-size:1.3rem;flex-shrink:0">⚡</span>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:var(--dark);margin-bottom:.2rem">Move fast, build well</div>
+              <div style="font-size:.82rem;color:var(--text-muted)">We ship, learn, and iterate. No analysis paralysis.</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)">
+            <span style="font-size:1.3rem;flex-shrink:0">🌿</span>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:var(--dark);margin-bottom:.2rem">Local first</div>
+              <div style="font-size:.82rem;color:var(--text-muted)">We hire locally, source locally, and invest in Manitoba.</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)">
+            <span style="font-size:1.3rem;flex-shrink:0">🔍</span>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:var(--dark);margin-bottom:.2rem">Transparency</div>
+              <div style="font-size:.82rem;color:var(--text-muted)">Open communication, honest feedback, shared goals.</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)">
+            <span style="font-size:1.3rem;flex-shrink:0">🤝</span>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:var(--dark);margin-bottom:.2rem">Everyone contributes</div>
+              <div style="font-size:.82rem;color:var(--text-muted)">In a small team, every voice shapes the direction.</div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN ROLES -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div class="section-label">Open Positions</div>
+    <h2>Join Our Team</h2>
+    <p style="margin-top:.5rem;max-width:600px">We're currently hiring for the following roles. All positions are based in Winnipeg, Manitoba, Canada.</p>
+
+    <div style="margin-top:3rem">
+
+      <!-- FEATURED ROLE -->
+      <div class="job-card" style="border-color:var(--accent);border-width:2px">
+        <div class="job-card-header">
+          <div>
+            <span class="job-tag job-tag-featured">🌟 Featured Role</span>
+            <h3 style="margin-top:.5rem">Co-Founder &amp; Operations Lead</h3>
+            <div class="job-meta">
+              <span class="job-tag job-tag-loc">📍 Winnipeg, MB</span>
+              <span class="job-tag job-tag-type">Full-Time</span>
+              <span class="job-tag" style="background:rgba(212,98,42,0.1);color:var(--accent)">Equity Opportunity</span>
+            </div>
+          </div>
+          <a href="contact.html?subject=cofounder" class="btn btn-accent" style="white-space:nowrap">Apply Now →</a>
+        </div>
+        <div class="job-card-body">
+          <p style="font-size:.9rem;line-height:1.8;margin-bottom:1.5rem;color:var(--text)">We're looking for a driven, resourceful third co-founder to lead the commercial launch of Map-Art Store in Winnipeg. This is a ground-floor opportunity to join a company with proven technology, secured funding, and an established business plan — and make it your own.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+            <div>
+              <div class="job-section-title">What You'll Do</div>
+              <ul class="job-list">
+                <li>Lead commercial launch of flagship products in 2024</li>
+                <li>Manage day-to-day business operations</li>
+                <li>Oversee manufacturing and order fulfilment</li>
+                <li>Drive local sales and marketing efforts</li>
+                <li>Build and manage the growing team</li>
+                <li>Work directly with the founding co-founders</li>
+              </ul>
+            </div>
+            <div>
+              <div class="job-section-title">What We're Looking For</div>
+              <ul class="job-list">
+                <li>Local to Manitoba (Winnipeg strongly preferred)</li>
+                <li>Strong technical skills (web, eCommerce, or manufacturing)</li>
+                <li>Strong marketing and sales skills</li>
+                <li>Experience launching or scaling a product or business</li>
+                <li>Self-starter who thrives in ambiguity</li>
+                <li>Passion for craft, technology, and beautiful products</li>
+              </ul>
+            </div>
+          </div>
+          <div style="background:rgba(212,98,42,0.05);border-radius:10px;padding:1.25rem;margin-top:1rem;border:1px solid rgba(212,98,42,0.15)">
+            <strong style="font-size:.85rem;color:var(--accent)">🏆 Equity opportunity available.</strong>
+            <span style="font-size:.85rem;color:var(--text-muted)"> The right candidate may have the opportunity to join as an equity partner in Map-Art Store Inc.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEVELOPER ROLE -->
+      <div class="job-card">
+        <div class="job-card-header">
+          <div>
+            <span class="job-tag job-tag-type">Coming in 2025</span>
+            <h3 style="margin-top:.5rem">Junior Developer / Technical Specialist</h3>
+            <div class="job-meta">
+              <span class="job-tag job-tag-loc">📍 Winnipeg, MB</span>
+              <span class="job-tag" style="background:rgba(58,90,64,0.1);color:var(--green)">Part-Time → Full-Time</span>
+            </div>
+          </div>
+          <a href="contact.html?subject=developer" class="btn btn-outline">Express Interest</a>
+        </div>
+        <div class="job-card-body">
+          <p style="font-size:.9rem;line-height:1.8;margin-bottom:1.5rem;color:var(--text)">As we scale, we'll need a technical team member to support our rendering infrastructure, Shopify integrations, and new feature development. This role grows with the company.</p>
+          <div class="job-section-title">Skills We're Interested In</div>
+          <ul class="job-list">
+            <li>JavaScript / Node.js or Python backend development</li>
+            <li>Shopify app development (preferred)</li>
+            <li>Cloud infrastructure (DigitalOcean, AWS)</li>
+            <li>SVG / graphics / rendering (bonus)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PRODUCTION ROLE -->
+      <div class="job-card">
+        <div class="job-card-header">
+          <div>
+            <span class="job-tag job-tag-type">Coming in 2025</span>
+            <h3 style="margin-top:.5rem">Production Specialist (Laser Cutting)</h3>
+            <div class="job-meta">
+              <span class="job-tag job-tag-loc">📍 Winnipeg, MB</span>
+              <span class="job-tag" style="background:rgba(58,90,64,0.1);color:var(--green)">Full-Time</span>
+            </div>
+          </div>
+          <a href="contact.html?subject=production" class="btn btn-outline">Express Interest</a>
+        </div>
+        <div class="job-card-body">
+          <p style="font-size:.9rem;line-height:1.8;margin-bottom:1.5rem;color:var(--text)">As our order volume grows, we'll need skilled production team members to operate our laser-cutting equipment, assemble products, and manage quality control and shipping.</p>
+          <div class="job-section-title">What's Involved</div>
+          <ul class="job-list">
+            <li>Operating the Nova 51-130 laser cutter (training provided)</li>
+            <li>Product assembly and quality checking</li>
+            <li>Packaging and order fulfilment</li>
+            <li>Inventory and material management</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SALES & MARKETING -->
+      <div class="job-card">
+        <div class="job-card-header">
+          <div>
+            <span class="job-tag job-tag-type">Coming in 2025</span>
+            <h3 style="margin-top:.5rem">Sales &amp; Marketing Coordinator</h3>
+            <div class="job-meta">
+              <span class="job-tag job-tag-loc">📍 Winnipeg, MB / Remote</span>
+              <span class="job-tag" style="background:rgba(58,90,64,0.1);color:var(--green)">Full-Time</span>
+            </div>
+          </div>
+          <a href="contact.html?subject=marketing" class="btn btn-outline">Express Interest</a>
+        </div>
+        <div class="job-card-body">
+          <p style="font-size:.9rem;line-height:1.8;margin-bottom:1.5rem;color:var(--text)">Drive customer acquisition through digital channels, manage our social presence, and develop corporate sales relationships. Help us grow from a local success to a national brand.</p>
+          <div class="job-section-title">What's Involved</div>
+          <ul class="job-list">
+            <li>SEO/SEM campaign management</li>
+            <li>Instagram and Pinterest content creation</li>
+            <li>Corporate outreach and account management</li>
+            <li>Email marketing and customer retention campaigns</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PERKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Why Work Here</div>
+    <h2>What We Offer</h2>
+    <div class="perks-grid">
+      <div class="perk-card"><div class="perk-icon">🏛️</div><h4>Ground Floor Opportunity</h4><p>Join at the very start and help shape the company's culture, products, and direction.</p></div>
+      <div class="perk-card"><div class="perk-icon">📈</div><h4>Equity Potential</h4><p>Senior roles include the opportunity for equity participation in the company's growth.</p></div>
+      <div class="perk-card"><div class="perk-icon">🇨🇦</div><h4>Proudly Canadian</h4><p>Help build a Canadian company, creating Canadian jobs and IP — headquartered in Winnipeg.</p></div>
+      <div class="perk-card"><div class="perk-icon">🎨</div><h4>Creative Work</h4><p>Work on a product that's genuinely beautiful — at the intersection of technology and craft.</p></div>
+      <div class="perk-card"><div class="perk-icon">🌱</div><h4>Rapid Growth</h4><p>Grow with the company. As we scale from 2 to 10 employees, so do the opportunities.</p></div>
+      <div class="perk-card"><div class="perk-icon">🤝</div><h4>Collaborative Culture</h4><p>A flat, honest, supportive team where every contribution is visible and valued.</p></div>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--dark);padding:5rem 5%;text-align:center">
+  <div class="container" style="max-width:600px">
+    <h2 style="color:var(--cream)">Don't See the Right Role?</h2>
+    <p style="color:rgba(245,240,232,0.65);margin:1rem 0 2rem">We're always interested in meeting talented people. Send us your resume and tell us how you'd contribute to Map-Art Store.</p>
+    <a href="contact.html?subject=general" class="btn btn-accent">Get in Touch →</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--cream)">Map-Art Store Inc.</div>
+        <p>Bridging distances through intricately designed, personalised geographical engravings &mdash; handcrafted in Winnipeg, Manitoba, Canada.</p>
+        <p class="tagline">"Encapsulating memories through geography."</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="technology.html">Our Technology</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html#diy">DIY Kits</a></li>
+          <li><a href="products.html#premium">Premium Maps</a></li>
+          <li><a href="products.html#corporate">Corporate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="mailto:info@map-artstore.ca">info@map-artstore.ca</a></li>
+          <li><a href="#">Winnipeg, Manitoba</a></li>
+          <li><a href="#">Canada</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Map-Art Store Inc. All rights reserved.</p>
+      <p>Made with ♥ in Winnipeg, Manitoba, Canada</p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Opportunity — Map-Art Store Inc.</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.market-number { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; line-height: 1; }
+.market-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+.market-card { padding: 2rem; border-radius: 14px; border: 1px solid var(--border); background: white; }
+.competitors-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.competitors-table th { background: var(--cream); padding: 1rem; text-align: left; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: var(--text); border-bottom: 2px solid var(--border); }
+.competitors-table td { padding: 1rem; border-bottom: 1px solid var(--border); font-size: 0.875rem; }
+.competitors-table tr:last-child td { border-bottom: none; }
+.competitors-table .us { background: rgba(212,98,42,0.05); }
+.check { color: var(--green); font-weight: 700; }
+.cross { color: #999; }
+.revenue-bars { margin-top: 2.5rem; }
+.rev-bar-row { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.25rem; }
+.rev-bar-label { width: 60px; font-size: 0.8rem; font-weight: 600; flex-shrink: 0; color: var(--text-muted); }
+.rev-bar-track { flex: 1; height: 28px; background: var(--cream); border-radius: 6px; overflow: hidden; }
+.rev-bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 0.75rem; font-size: 0.78rem; font-weight: 700; color: white; transition: width 1s ease; }
+.rev-bar-val { width: 80px; text-align: right; font-family: 'Playfair Display', serif; font-weight: 700; flex-shrink: 0; color: var(--wood); }
+@media (max-width: 900px) { .market-cards { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .market-cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+    </div>
+    Map-Art Store
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    <li><a href="market_zh.html" class="lang-switch" title="切换中文">🌐 中文</a></li>
+  </ul>
+</nav>
+
+<script src="js/main.js"></script>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label">Market Opportunity</div>
+    <h1>A Growing Market<br>with Clear Demand</h1>
+    <p>The global wall décor market is worth $82.5 billion in 2023 and growing. Map-Art Store sits at the intersection of custom products, eCommerce, and personalised home décor — a uniquely positioned business with a proven concept.</p>
+  </div>
+</div>
+
+<!-- MARKET SIZE -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Market Size</div>
+    <h2>The Numbers Tell the Story</h2>
+    <div class="market-cards">
+      <div class="market-card" style="background:var(--dark);color:var(--cream);border-color:transparent">
+        <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);margin-bottom:.5rem">Total Addressable Market</div>
+        <div class="market-number" style="color:var(--gold-light)">$47B</div>
+        <div style="font-size:.85rem;color:rgba(245,240,232,0.6);margin-top:.5rem">Wall décor market · North America · 2027</div>
+      </div>
+      <div class="market-card" style="background:var(--accent);color:white;border-color:transparent">
+        <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:.5rem">Serviceable Addressable Market</div>
+        <div class="market-number" style="color:white">$132.5M</div>
+        <div style="font-size:.85rem;color:rgba(255,255,255,0.7);margin-top:.5rem">5 custom wall décor products · North America</div>
+      </div>
+      <div class="market-card">
+        <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem">Serviceable Obtainable Market</div>
+        <div class="market-number" style="color:var(--wood)">$1.8M</div>
+        <div style="font-size:.85rem;color:var(--text-muted);margin-top:.5rem">1.3% market capture target by 2027</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2rem">
+      <div style="background:var(--cream);padding:1.5rem;border-radius:12px;border:1px solid var(--border);text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--dark)">$82.5B</div>
+        <div style="font-size:.78rem;color:var(--text-muted);margin-top:.3rem">Global wall décor (2023)</div>
+      </div>
+      <div style="background:var(--cream);padding:1.5rem;border-radius:12px;border:1px solid var(--border);text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--dark)">3.5%</div>
+        <div style="font-size:.78rem;color:var(--text-muted);margin-top:.3rem">Annual market growth rate</div>
+      </div>
+      <div style="background:var(--cream);padding:1.5rem;border-radius:12px;border:1px solid var(--border);text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--dark)">8,472</div>
+        <div style="font-size:.78rem;color:var(--text-muted);margin-top:.3rem">Laser-cut maps on Etsy (2023)</div>
+      </div>
+      <div style="background:var(--cream);padding:1.5rem;border-radius:12px;border:1px solid var(--border);text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--dark)">$150</div>
+        <div style="font-size:.78rem;color:var(--text-muted);margin-top:.3rem">Average map price point</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVENUE PROJECTIONS -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
+      <div>
+        <div class="section-label">Financial Projections</div>
+        <h2>Revenue Growth Trajectory</h2>
+        <p style="margin-top:.75rem;line-height:1.8">Our 5-year financial model shows escalating revenue with EBITDA turning positive in Year 2 and reaching $279,000 by Year 5.</p>
+        <div class="revenue-bars">
+          
+          <div class="rev-bar-row">
+            <div class="rev-bar-label">Year 2</div>
+            <div class="rev-bar-track">
+              <div class="rev-bar-fill" style="width:11%;background:#8B5E3C">2025</div>
+            </div>
+            <div class="rev-bar-val">$248K</div>
+          </div>
+          
+          <div class="rev-bar-row">
+            <div class="rev-bar-label">Year 3</div>
+            <div class="rev-bar-track">
+              <div class="rev-bar-fill" style="width:25%;background:#C4956A">2026</div>
+            </div>
+            <div class="rev-bar-val">$556K</div>
+          </div>
+          
+          <div class="rev-bar-row">
+            <div class="rev-bar-label">Year 4</div>
+            <div class="rev-bar-track">
+              <div class="rev-bar-fill" style="width:58%;background:#D4622A">2027</div>
+            </div>
+            <div class="rev-bar-val">$1.33M</div>
+          </div>
+          
+          <div class="rev-bar-row">
+            <div class="rev-bar-label">Year 5</div>
+            <div class="rev-bar-track">
+              <div class="rev-bar-fill" style="width:100%;background:#1C1A16">2028</div>
+            </div>
+            <div class="rev-bar-val">$2.27M</div>
+          </div>
+          
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem">
+          <div style="background:var(--dark);padding:1.25rem;border-radius:10px;color:var(--cream)">
+            <div style="font-size:.75rem;color:rgba(245,240,232,0.4);text-transform:uppercase;letter-spacing:.08em">EBITDA Year 5</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold-light)">$279K</div>
+          </div>
+          <div style="background:var(--accent);padding:1.25rem;border-radius:10px;color:white">
+            <div style="font-size:.75rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:.08em">Net Cash Flow Yr 5</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.8rem">$279K</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:2rem">
+          <h3 style="font-size:1.1rem;margin-bottom:1.5rem">Sales Targets by Phase</h3>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--cream);align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--wood);flex-shrink:0;margin-top:.4rem"></div>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-weight:700;font-size:.9rem;color:var(--dark)">100 sales/quarter</span>
+                <span style="font-size:.75rem;color:var(--text-muted)">Q1 2025</span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text-muted);margin-top:.15rem">Phase 2 — Local Market Entry</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--cream);align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--wood);flex-shrink:0;margin-top:.4rem"></div>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-weight:700;font-size:.9rem;color:var(--dark)">250 sales/quarter</span>
+                <span style="font-size:.75rem;color:var(--text-muted)">Q2 2025</span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text-muted);margin-top:.15rem">Phase 3 — Online Expansion</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--cream);align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--wood);flex-shrink:0;margin-top:.4rem"></div>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-weight:700;font-size:.9rem;color:var(--dark)">600 sales/quarter</span>
+                <span style="font-size:.75rem;color:var(--text-muted)">Q3 2025</span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text-muted);margin-top:.15rem">Phase 4 — Product Diversification</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--cream);align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--wood);flex-shrink:0;margin-top:.4rem"></div>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-weight:700;font-size:.9rem;color:var(--dark)">900 sales/quarter</span>
+                <span style="font-size:.75rem;color:var(--text-muted)">Q2 2026</span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text-muted);margin-top:.15rem">Phase 5 — Platform Transition</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--cream);align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--wood);flex-shrink:0;margin-top:.4rem"></div>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-weight:700;font-size:.9rem;color:var(--dark)">1,200 sales/quarter</span>
+                <span style="font-size:.75rem;color:var(--text-muted)">Q4 2026</span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text-muted);margin-top:.15rem">Phase 6 — Amazon Sales</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;gap:1rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--cream);align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--wood);flex-shrink:0;margin-top:.4rem"></div>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-weight:700;font-size:.9rem;color:var(--dark)">6,250 sales/quarter</span>
+                <span style="font-size:.75rem;color:var(--text-muted)">End 2028</span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text-muted);margin-top:.15rem">Phase 7 — Continuous Growth</div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETITIVE ANALYSIS -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Competitive Landscape</div>
+    <h2>Where We Stand Out</h2>
+    <p style="max-width:650px;margin-top:.5rem;line-height:1.8">Map-Art Store differentiates through technology, not just craftsmanship. Our real-time preview engine creates a buying experience closer to Amazon than to Etsy.</p>
+    <div style="overflow-x:auto">
+      <table class="competitors-table">
+        <thead>
+          <tr>
+            <th>Competitor</th>
+            <th>Platform</th>
+            <th>Price Range</th>
+            <th>Real-time Preview</th>
+            <th>Self-Serve UX</th>
+            <th>Custom Laser-Cut Wood</th>
+            <th>Instant 3D Render</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="us">
+            <td><strong>Map-Art Store ⭐</strong></td>
+            <td>Shopify (own)</td>
+            <td>$55–$245</td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="check">✓ Yes</span></td>
+          </tr>
+          <tr>
+            <td>Carbonlight</td>
+            <td>Shopify</td>
+            <td>$100–$600+</td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="cross">✗ No</span></td>
+          </tr>
+          <tr>
+            <td>Cut Maps</td>
+            <td>Own website</td>
+            <td>$205–$480</td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td><span class="cross">✗ No</span></td>
+          </tr>
+          <tr>
+            <td>Etsy sellers</td>
+            <td>Etsy marketplace</td>
+            <td>$50–$200+</td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="check">✓ Some</span></td>
+            <td><span class="cross">✗ No</span></td>
+          </tr>
+          <tr>
+            <td>Peaks</td>
+            <td>Own website</td>
+            <td>Custom quotes</td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="check">✓ Yes (3D)</span></td>
+            <td><span class="cross">✗ No</span></td>
+          </tr>
+          <tr>
+            <td>Redbubble</td>
+            <td>Marketplace</td>
+            <td>Varies</td>
+            <td><span class="cross">✗ No</span></td>
+            <td><span class="check">✓ Partial</span></td>
+            <td><span class="cross">✗ Prints only</span></td>
+            <td><span class="cross">✗ No</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TARGET MARKET -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div class="section-label">Target Market</div>
+    <h2>Who Buys Our Maps</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem">
+      
+      <div style="background:white;border-radius:14px;padding:1.75rem;border:1px solid var(--border)">
+        <div style="font-size:2rem;margin-bottom:.75rem">🏠</div>
+        <h3 style="font-size:1rem;margin-bottom:.4rem">Homeowners &amp; Cabin Owners</h3>
+        <p style="font-size:.82rem;line-height:1.65;margin-bottom:.75rem">Middle to upper-middle class. 18–65+. Seeking unique, meaningful wall décor for personal spaces.</p>
+        <span class="badge" style="font-size:.7rem">Individual</span>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:1.75rem;border:1px solid var(--border)">
+        <div style="font-size:2rem;margin-bottom:.75rem">🎁</div>
+        <h3 style="font-size:1rem;margin-bottom:.4rem">Gift Buyers</h3>
+        <p style="font-size:.82rem;line-height:1.65;margin-bottom:.75rem">Looking for memorable, personalised gifts for weddings, housewarmings, birthdays, and life milestones.</p>
+        <span class="badge" style="font-size:.7rem">Individual</span>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:1.75rem;border:1px solid var(--border)">
+        <div style="font-size:2rem;margin-bottom:.75rem">🏢</div>
+        <h3 style="font-size:1rem;margin-bottom:.4rem">Corporate Clients</h3>
+        <p style="font-size:.82rem;line-height:1.65;margin-bottom:.75rem">Office decoration, employee gifts, holiday campaigns, and branded client gifts in bulk.</p>
+        <span class="badge" style="font-size:.7rem">Corporate</span>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:1.75rem;border:1px solid var(--border)">
+        <div style="font-size:2rem;margin-bottom:.75rem">🎨</div>
+        <h3 style="font-size:1rem;margin-bottom:.4rem">Interior Designers</h3>
+        <p style="font-size:.82rem;line-height:1.65;margin-bottom:.75rem">Professionals who specify unique wall art for residential and commercial design projects.</p>
+        <span class="badge" style="font-size:.7rem">B2B</span>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:1.75rem;border:1px solid var(--border)">
+        <div style="font-size:2rem;margin-bottom:.75rem">🏡</div>
+        <h3 style="font-size:1rem;margin-bottom:.4rem">Real Estate Agencies</h3>
+        <p style="font-size:.82rem;line-height:1.65;margin-bottom:.75rem">Closing gifts for buyers and sellers — a map of their new property\'s neighbourhood.</p>
+        <span class="badge" style="font-size:.7rem">B2B</span>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:1.75rem;border:1px solid var(--border)">
+        <div style="font-size:2rem;margin-bottom:.75rem">🎓</div>
+        <h3 style="font-size:1rem;margin-bottom:.4rem">Educational Institutions</h3>
+        <p style="font-size:.82rem;line-height:1.65;margin-bottom:.75rem">Interactive geographic learning tools for schools, universities, and libraries.</p>
+        <span class="badge" style="font-size:.7rem">Institutional</span>
+      </div>
+      
+    </div>
+    <div style="background:var(--dark);border-radius:14px;padding:2rem;margin-top:1.5rem;display:flex;gap:2rem;align-items:center;flex-wrap:wrap">
+      <div style="flex:1;min-width:200px">
+        <div style="font-size:.78rem;color:rgba(245,240,232,0.5);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem">Primary Target Demographics</div>
+        <h3 style="color:var(--cream)">Ages 18–65+ · Middle to Upper-Middle Class</h3>
+        <p style="color:rgba(245,240,232,0.6);font-size:.875rem;margin-top:.5rem">Interests: travel, geography, design, DIY crafts, education, home &amp; cabin ownership, and business branding.</p>
+      </div>
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+        <div style="text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--gold-light);line-height:1">218M</div>
+          <div style="font-size:.75rem;color:rgba(245,240,232,0.4);margin-top:.3rem">Shopify buyers globally</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--accent);line-height:1">$100B</div>
+          <div style="font-size:.75rem;color:rgba(245,240,232,0.4);margin-top:.3rem">Canada eCommerce by 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--cream)">Map-Art Store Inc.</div>
+        <p>Bridging distances through intricately designed, personalised geographical engravings &mdash; handcrafted in Winnipeg, Manitoba, Canada.</p>
+        <p class="tagline">"Encapsulating memories through geography."</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="technology.html">Our Technology</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html#diy">DIY Kits</a></li>
+          <li><a href="products.html#premium">Premium Maps</a></li>
+          <li><a href="products.html#corporate">Corporate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="mailto:info@map-artstore.ca">info@map-artstore.ca</a></li>
+          <li><a href="#">Winnipeg, Manitoba</a></li>
+          <li><a href="#">Canada</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Map-Art Store Inc. All rights reserved.</p>
+      <p>Made with ♥ in Winnipeg, Manitoba, Canada</p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

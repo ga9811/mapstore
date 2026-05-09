@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technology — Map-Art Store Inc.</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+.tech-card { background: white; border-radius: 16px; padding: 2rem; border: 1px solid var(--border); }
+.tech-card-icon { width: 52px; height: 52px; border-radius: 12px; background: var(--dark); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem; }
+.tech-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.tech-card p { font-size: 0.875rem; line-height: 1.7; }
+
+.rendering-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.stat-card { background: var(--dark); color: var(--cream); border-radius: 12px; padding: 1.75rem; }
+.stat-card .label { font-size: 0.75rem; color: rgba(245,240,232,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.stat-card .value { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--gold-light); line-height: 1; }
+.stat-card .sub { font-size: 0.8rem; color: rgba(245,240,232,0.4); margin-top: 0.35rem; }
+
+.arch-flow { display: flex; gap: 0; align-items: stretch; margin-top: 3rem; overflow-x: auto; }
+.arch-node { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; flex: 1; min-width: 140px; text-align: center; position: relative; }
+.arch-node h4 { font-size: 0.85rem; margin-bottom: 0.3rem; }
+.arch-node p { font-size: 0.75rem; color: var(--text-muted); }
+.arch-arrow { display: flex; align-items: center; padding: 0 0.5rem; font-size: 1.5rem; color: var(--border); flex-shrink: 0; }
+.arch-node.highlight-node { background: var(--dark); border-color: var(--dark); }
+.arch-node.highlight-node h4 { color: var(--gold-light); }
+.arch-node.highlight-node p { color: rgba(245,240,232,0.5); }
+
+.improvement-list { list-style: none; margin-top: 2rem; }
+.improvement-list li { padding: 1.25rem; background: white; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 1rem; display: flex; gap: 1rem; align-items: flex-start; }
+.improvement-list li .imp-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+.improvement-list li h4 { font-size: 0.9rem; margin-bottom: 0.25rem; }
+.improvement-list li p { font-size: 0.82rem; }
+
+@media (max-width: 900px) { .tech-grid { grid-template-columns: 1fr 1fr; } .rendering-stats { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .tech-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+    </div>
+    Map-Art Store
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="technology.html" class="active">Technology</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    <li><a href="technology_zh.html" class="lang-switch" title="切换中文">🌐 中文</a></li>
+  </ul>
+</nav>
+
+<script src="js/main.js"></script>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label">Our Technology</div>
+    <h1>Real-Time Rendering.<br>Instant Gratification.</h1>
+    <p>Map-Art Store's proprietary rendering engine transforms the custom product experience — from a slow, high-touch process into a fast, self-serve journey that rivals buying from Amazon.</p>
+  </div>
+</div>
+
+<!-- TECH OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
+      <div>
+        <div class="section-label">The Innovation</div>
+        <h2>See It Before We Build It</h2>
+        <p style="margin-top:1rem;line-height:1.9">Our core technological differentiator is a real-time 3D preview engine. When a customer moves the map, changes the size, selects a material, or updates the title text — they instantly see exactly what their finished wooden map will look like.</p>
+        <p style="margin-top:1rem;line-height:1.9">This moves the buying experience from the traditional niche/custom model (slow, email-based, high-touch) to a mass-market, self-serve model — while still delivering a fully personalised product.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem">
+          <div style="background:var(--cream);padding:1.25rem;border-radius:10px;border:1px solid var(--border)">
+            <div style="font-size:1.6rem;margin-bottom:.4rem">⚡</div>
+            <h4 style="font-size:.9rem;margin-bottom:.3rem">Fast &amp; Self-Serve</h4>
+            <p style="font-size:.8rem">No waiting for quotes. See your map instantly and order in minutes.</p>
+          </div>
+          <div style="background:var(--cream);padding:1.25rem;border-radius:10px;border:1px solid var(--border)">
+            <div style="font-size:1.6rem;margin-bottom:.4rem">🎯</div>
+            <h4 style="font-size:.9rem;margin-bottom:.3rem">Accurate Previews</h4>
+            <p style="font-size:.8rem">What you see on screen is exactly what gets laser-cut in wood.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--dark);border-radius:16px;padding:2rem;border:1px solid rgba(201,168,76,0.2)">
+          <div style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.5rem;font-weight:600">Beta Trial Performance</div>
+          <div class="rendering-stats">
+            <div class="stat-card">
+              <div class="label">Initial Render — Average</div>
+              <div class="value">14.1s</div>
+              <div class="sub">Min: 5.9s · Max: 72.5s</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Post-Initial Render — Average</div>
+              <div class="value">16.3s</div>
+              <div class="sub">Min: 0.01s · Max: 58.8s</div>
+            </div>
+            <div class="stat-card" style="background:var(--accent)">
+              <div class="label">Beta Maps Completed</div>
+              <div class="value" style="color:white">19/20</div>
+              <div class="sub" style="color:rgba(255,255,255,0.5)">95% blueprint success rate</div>
+            </div>
+            <div class="stat-card" style="background:var(--green)">
+              <div class="label">Target Render Time</div>
+              <div class="value" style="color:white">&lt;10s</div>
+              <div class="sub" style="color:rgba(255,255,255,0.5)">Goal for production launch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div class="section-label">Technical Architecture</div>
+    <h2>How the System Works</h2>
+    <p style="max-width:600px;margin-top:.5rem">Our technology stack is built on a single Virtual Machine with plans for horizontal scaling. Here's how a customer order flows through the system.</p>
+    <div class="arch-flow">
+      <div class="arch-node">
+        <div style="font-size:1.5rem;margin-bottom:.5rem">🌐</div>
+        <h4>Shopify Store</h4>
+        <p>Customer-facing web store &amp; checkout</p>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-node highlight-node">
+        <div style="font-size:1.5rem;margin-bottom:.5rem">🗺️</div>
+        <h4>Blueprint Builder</h4>
+        <p>Cartographer API generates SVG blueprints</p>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-node highlight-node">
+        <div style="font-size:1.5rem;margin-bottom:.5rem">🎨</div>
+        <h4>Renderer</h4>
+        <p>Blender-powered 3D preview generation</p>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-node">
+        <div style="font-size:1.5rem;margin-bottom:.5rem">📦</div>
+        <h4>Webhook Handler</h4>
+        <p>Order confirmation &amp; file delivery</p>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-node">
+        <div style="font-size:1.5rem;margin-bottom:.5rem">🔬</div>
+        <h4>Laser Cutter</h4>
+        <p>Nova 51-130 precision cutting</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH COMPONENTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Key Technologies</div>
+    <h2>Built with the Right Tools</h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-card-icon">🔥</div>
+        <h3>LightBurn Software</h3>
+        <p>Industry-standard laser cutting and engraving software. Supports SVG, DXF, AI, PNG, JPG and BMP file formats with precise power and speed control.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon">🎯</div>
+        <h3>Nova 51-130 Laser Cutter</h3>
+        <p>High-quality CO2 laser cutter capable of cutting and engraving wood, acrylic, leather, and more. Features autofocus, red dot positioning, and USB/Ethernet connectivity.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon">🛒</div>
+        <h3>Shopify Platform</h3>
+        <p>Robust eCommerce infrastructure handling order processing, payment processing, and customer communication. Proven reliable in our beta trial with no reported issues.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon">☁️</div>
+        <h3>Cloud Infrastructure</h3>
+        <p>DigitalOcean Droplets (VMs) hosting our API, Webhook Handler, Renderer, and Blueprint Builder. Migration to centralised S3/Spaces storage planned for scalability.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon">🌍</div>
+        <h3>Map Data APIs</h3>
+        <p>OpenStreetMap and geographic data sources power our location search and blueprint generation — providing street-level detail for any location in the world.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-card-icon">🎬</div>
+        <h3>Blender Rendering</h3>
+        <p>Our 3D preview images are rendered using Blender, giving customers photorealistic visualisations of their custom map before they commit to purchasing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPROVEMENTS -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem">
+      <div>
+        <div class="section-label">Roadmap</div>
+        <h2>Planned Improvements</h2>
+        <p style="margin-top:.5rem;line-height:1.8">Based on our beta trial results and customer feedback, we have a clear technical roadmap for improving performance, scalability, and user experience.</p>
+        <ul class="improvement-list">
+          <li><div class="imp-icon">📁</div><div><h4>Centralised File Storage</h4><p>Migrate to AWS S3 or DigitalOcean Spaces for scalable blueprint and preview file storage accessible across all VM instances.</p></div></li>
+          <li><div class="imp-icon">🔘</div><div><h4>User-Initiated Preview Button</h4><p>Replace real-time auto-rendering with a "Generate Preview" button — reducing server load and giving users more control.</p></div></li>
+          <li><div class="imp-icon">📈</div><div><h4>Horizontal Scaling</h4><p>Implement Load Balancer + multiple VM instances or Serverless Functions to handle concurrent users without slowdown.</p></div></li>
+          <li><div class="imp-icon">📱</div><div><h4>Manufacturer App</h4><p>Build a dedicated Shopify App for manufacturers to easily download .zip blueprints and track order status.</p></div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Beta Feedback</div>
+        <h2>What Users Requested</h2>
+        <p style="margin-top:.5rem;line-height:1.8">Our 16 beta customers provided detailed feedback that directly informs our product roadmap.</p>
+        <ul style="list-style:none;margin-top:1.5rem"><li style="display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-muted)"><span>🗺️</span><span>Ability to remove areas on the map to isolate target regions</span></li><li style="display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-muted)"><span>🛠️</span><span>Accessories: stands, icons, bolts instead of glue, and keyholes for hanging</span></li><li style="display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-muted)"><span>🎯</span><span>Increased rendering accuracy for challenging terrain (mountains, trails)</span></li><li style="display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-muted)"><span>🎨</span><span>More customisation: remove layers, coloured water, text style &amp; language</span></li><li style="display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-muted)"><span>📸</span><span>Website branding: real product photos and videos of the laser cutter</span></li><li style="display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-muted)"><span>✅</span><span>Pre-assembled map option (most requested feature)</span></li><li style="display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-muted)"><span>🔩</span><span>Wall mounting options — hook or keyhole cutout on map itself</span></li><li style="display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-muted)"><span>⏱️</span><span>Decreased rendering time — target under 10 seconds</span></li><li style="display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--text-muted)"><span>🖼️</span><span>Size comparison tool for customers to visualise map scale</span></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--dark);padding:5rem 5%;text-align:center">
+  <div class="container" style="max-width:600px">
+    <div class="section-label" style="justify-content:center;color:var(--gold-light)">IP &amp; Ownership</div>
+    <h2 style="color:var(--cream)">Canadian-Owned Technology</h2>
+    <p style="color:rgba(245,240,232,0.65);margin:1rem 0 2rem;line-height:1.9">Map-Art Store's proprietary real-time rendering engine is wholly owned and held in Canada by Map-Art Store Inc. The development team that created this technology is Canadian, and we are proud to hold this IP domestically.</p>
+    <a href="contact.html" class="btn btn-accent">Contact Us →</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--cream)">Map-Art Store Inc.</div>
+        <p>Bridging distances through intricately designed, personalised geographical engravings &mdash; handcrafted in Winnipeg, Manitoba, Canada.</p>
+        <p class="tagline">"Encapsulating memories through geography."</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="technology.html">Our Technology</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html#diy">DIY Kits</a></li>
+          <li><a href="products.html#premium">Premium Maps</a></li>
+          <li><a href="products.html#corporate">Corporate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="mailto:info@map-artstore.ca">info@map-artstore.ca</a></li>
+          <li><a href="#">Winnipeg, Manitoba</a></li>
+          <li><a href="#">Canada</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Map-Art Store Inc. All rights reserved.</p>
+      <p>Made with ♥ in Winnipeg, Manitoba, Canada</p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

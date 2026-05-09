@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beta Trial Story — Map-Art Store Inc.</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.feedback-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.feedback-card { background: white; border-radius: 14px; padding: 2rem; border: 1px solid var(--border); }
+.feedback-card .quote { font-style: italic; font-size: .9rem; line-height: 1.8; color: var(--text); margin-bottom: 1rem; border-left: 3px solid var(--wood-pale); padding-left: 1rem; }
+.feedback-meta { display: flex; gap: .75rem; align-items: center; }
+.feedback-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--wood); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: .9rem; flex-shrink: 0; }
+.feedback-meta .info h4 { font-size: .85rem; margin-bottom: .1rem; }
+.feedback-meta .info p { font-size: .78rem; }
+.map-img { background: var(--wood-pale); border-radius: 12px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); overflow: hidden; }
+.maps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+@media (max-width: 900px) { .feedback-grid { grid-template-columns: 1fr; } .maps-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .maps-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+    </div>
+    Map-Art Store
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    <li><a href="index_zh.html" class="lang-switch" title="切换中文">🌐 中文</a></li>
+  </ul>
+</nav>
+
+<script src="js/main.js"></script>
+
+<div class="page-hero" style="background:linear-gradient(135deg, #2A2620 0%, #1C1A16 100%)">
+  <div class="container">
+    <div class="section-label">Beta Trial · 2022</div>
+    <h1>How We Proved<br>the Concept</h1>
+    <p>In 2022, we ran a real-world beta trial with 20 custom maps ordered through our platform by 16 participants. Here's what we learned — and how it shaped everything that came after.</p>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+      <div>
+        <div class="section-label">The Trial</div>
+        <h2>20 Maps. Real Customers.<br>Real Feedback.</h2>
+        <p style="margin-top:1rem;line-height:1.9">Our beta trial was designed by Norima Consulting to assess the performance of our preview generation technology and order processing system. Each participant ordered a custom map for just $1 — a real transaction through our Shopify store.</p>
+        <p style="margin-top:1rem;line-height:1.9">They received their laser-cut maps, assembled them, and shared detailed feedback on the website experience, product quality, and assembly process. The results were overwhelmingly positive — and illuminated exactly what to improve next.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem">
+          <div style="background:var(--dark);color:var(--cream);padding:1.25rem;border-radius:10px;text-align:center">
+            <div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--gold-light);line-height:1">20</div>
+            <div style="font-size:.75rem;color:rgba(245,240,232,0.4);margin-top:.3rem">Maps ordered</div>
+          </div>
+          <div style="background:var(--accent);color:white;padding:1.25rem;border-radius:10px;text-align:center">
+            <div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:white;line-height:1">19/20</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,0.6);margin-top:.3rem">Successful blueprints</div>
+          </div>
+          <div style="background:var(--green);color:white;padding:1.25rem;border-radius:10px;text-align:center">
+            <div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:white;line-height:1">16</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,0.6);margin-top:.3rem">Unique beta users</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--dark);border-radius:16px;padding:2rem;border:1px solid rgba(201,168,76,0.2)">
+          <div style="font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.5rem;font-weight:600">Maps Made in the Beta Trial</div>
+          <div class="maps-grid">
+            
+            <div style="background:#E8D5BC;border-radius:8px;padding:1rem;text-align:center;font-family:'Playfair Display',serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#8B5E3C;border:1px solid rgba(139,94,60,0.2);position:relative;overflow:hidden">
+              <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(139,94,60,0.15) 1px, transparent 1px),linear-gradient(90deg, rgba(139,94,60,0.15) 1px, transparent 1px);background-size:12px 12px;opacity:.5"></div>
+              <span style="position:relative;z-index:1">WINNIPEG</span>
+            </div>
+            
+            <div style="background:#D4C9B8;border-radius:8px;padding:1rem;text-align:center;font-family:'Playfair Display',serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#6B5040;border:1px solid rgba(139,94,60,0.2);position:relative;overflow:hidden">
+              <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(139,94,60,0.15) 1px, transparent 1px),linear-gradient(90deg, rgba(139,94,60,0.15) 1px, transparent 1px);background-size:12px 12px;opacity:.5"></div>
+              <span style="position:relative;z-index:1">BALI</span>
+            </div>
+            
+            <div style="background:#E8D5BC;border-radius:8px;padding:1rem;text-align:center;font-family:'Playfair Display',serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#8B5E3C;border:1px solid rgba(139,94,60,0.2);position:relative;overflow:hidden">
+              <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(139,94,60,0.15) 1px, transparent 1px),linear-gradient(90deg, rgba(139,94,60,0.15) 1px, transparent 1px);background-size:12px 12px;opacity:.5"></div>
+              <span style="position:relative;z-index:1">MONTREAL</span>
+            </div>
+            
+            <div style="background:#D9CDB8;border-radius:8px;padding:1rem;text-align:center;font-family:'Playfair Display',serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#7A5535;border:1px solid rgba(139,94,60,0.2);position:relative;overflow:hidden">
+              <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(139,94,60,0.15) 1px, transparent 1px),linear-gradient(90deg, rgba(139,94,60,0.15) 1px, transparent 1px);background-size:12px 12px;opacity:.5"></div>
+              <span style="position:relative;z-index:1">HALIFAX</span>
+            </div>
+            
+            <div style="background:#E2D4BE;border-radius:8px;padding:1rem;text-align:center;font-family:'Playfair Display',serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#8B5E3C;border:1px solid rgba(139,94,60,0.2);position:relative;overflow:hidden">
+              <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(139,94,60,0.15) 1px, transparent 1px),linear-gradient(90deg, rgba(139,94,60,0.15) 1px, transparent 1px);background-size:12px 12px;opacity:.5"></div>
+              <span style="position:relative;z-index:1">HAWAII</span>
+            </div>
+            
+            <div style="background:#E8D5BC;border-radius:8px;padding:1rem;text-align:center;font-family:'Playfair Display',serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#956B42;border:1px solid rgba(139,94,60,0.2);position:relative;overflow:hidden">
+              <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(139,94,60,0.15) 1px, transparent 1px),linear-gradient(90deg, rgba(139,94,60,0.15) 1px, transparent 1px);background-size:12px 12px;opacity:.5"></div>
+              <span style="position:relative;z-index:1">SAN DIEGO</span>
+            </div>
+            
+          </div>
+          <p style="font-size:.78rem;color:rgba(245,240,232,0.4);margin-top:1rem;text-align:center">+ Countesthorpe, Breezy Point, Forks, Lynnville, Manila, Vita MB, Castle Rock, Kenora, and more</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT THEY SAID -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div class="section-label">Customer Feedback</div>
+    <h2>What Our Beta Customers Said</h2>
+    <div class="feedback-grid">
+      
+      <div class="feedback-card">
+        <p class="quote">"The map looked identical to the render! I am impressed by the quality and accuracy!"</p>
+        <div class="feedback-meta">
+          <div class="feedback-avatar">T</div>
+          <div class="info">
+            <h4>Beta Customer #11</h4>
+            <p>Medium Birch — Transcona/Winnipeg</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="feedback-card">
+        <p class="quote">"The final product looks spot on for what my rendered image looked like! So, the accuracy is on point!"</p>
+        <div class="feedback-meta">
+          <div class="feedback-avatar">T</div>
+          <div class="info">
+            <h4>Beta Customer #10</h4>
+            <p>3 × Small Birch — Winnipeg, Manila, San Diego</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="feedback-card">
+        <p class="quote">"Map looks amazing! The material in person is much lighter than the render shows."</p>
+        <div class="feedback-meta">
+          <div class="feedback-avatar">M</div>
+          <div class="info">
+            <h4>Beta Customer #2</h4>
+            <p>Medium Red Oak — Breezy Point</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="feedback-card">
+        <p class="quote">"I enjoyed this wood project! It has a personal touch to it, brings back fond memories of my hometown where I grew up."</p>
+        <div class="feedback-meta">
+          <div class="feedback-avatar">I</div>
+          <div class="info">
+            <h4>Beta Customer #13</h4>
+            <p>Small Birch — Vita, MB</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="feedback-card">
+        <p class="quote">"The cut quality of my map is really good, no complaints. The checkout was very smooth! Overall, I am very happy with it!"</p>
+        <div class="feedback-meta">
+          <div class="feedback-avatar">T</div>
+          <div class="info">
+            <h4>Beta Customer #7</h4>
+            <p>Medium Birch — Halifax</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="feedback-card">
+        <p class="quote">"Having the option to view what you\'re going to order is amazing and is not always an available feature when ordering personalized products."</p>
+        <div class="feedback-meta">
+          <div class="feedback-avatar">H</div>
+          <div class="info">
+            <h4>Beta Customer #10</h4>
+            <p>Three-map order — Winnipeg / Manila / San Diego</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE LEARNED -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Lessons Learned</div>
+    <h2>Every Map Made Us Better</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem">
+      
+      <div style="background:white;border-radius:14px;padding:2rem;border:1px solid var(--border)">
+        <div style="font-size:1.8rem;margin-bottom:.75rem">💪</div>
+        <h3 style="font-size:1rem;margin-bottom:.5rem">Product Quality</h3>
+        <p style="font-size:.875rem;line-height:1.7">Maps were highly accurate and matched the on-screen preview. Customers were consistently impressed with the laser-cut detail.</p>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:2rem;border:1px solid var(--border)">
+        <div style="font-size:1.8rem;margin-bottom:.75rem">⏱️</div>
+        <h3 style="font-size:1rem;margin-bottom:.5rem">Rendering Speed</h3>
+        <p style="font-size:.875rem;line-height:1.7">Average render time of 14 seconds was higher than ideal. We\'ve designed a "Generate Preview" button and infrastructure scaling to fix this.</p>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:2rem;border:1px solid var(--border)">
+        <div style="font-size:1.8rem;margin-bottom:.75rem">🔧</div>
+        <h3 style="font-size:1rem;margin-bottom:.5rem">Assembly Experience</h3>
+        <p style="font-size:.875rem;line-height:1.7">Most customers wanted pre-assembled options. This directly led to our Basic + Frame and Premium Product offerings.</p>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:2rem;border:1px solid var(--border)">
+        <div style="font-size:1.8rem;margin-bottom:.75rem">🎨</div>
+        <h3 style="font-size:1rem;margin-bottom:.5rem">Customisation Demand</h3>
+        <p style="font-size:.875rem;line-height:1.7">Customers want more: coloured water layers, font choices, accessories, epoxy finishes. These feed directly into our product roadmap.</p>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:2rem;border:1px solid var(--border)">
+        <div style="font-size:1.8rem;margin-bottom:.75rem">🏪</div>
+        <h3 style="font-size:1rem;margin-bottom:.5rem">Shopify Performance</h3>
+        <p style="font-size:.875rem;line-height:1.7">Zero issues reported with the Shopify storefront, checkout, or order management. A reliable foundation for scaling.</p>
+      </div>
+      
+      <div style="background:white;border-radius:14px;padding:2rem;border:1px solid var(--border)">
+        <div style="font-size:1.8rem;margin-bottom:.75rem">📦</div>
+        <h3 style="font-size:1rem;margin-bottom:.5rem">Fragile Parts Risk</h3>
+        <p style="font-size:.875rem;line-height:1.7">Some maps had very thin roads that could break. We\'ve since introduced minimum feature width guards in the blueprint builder.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--dark);padding:5rem 5%;text-align:center">
+  <div class="container" style="max-width:600px">
+    <h2 style="color:var(--cream)">The Beta Made Us Confident</h2>
+    <p style="color:rgba(245,240,232,0.65);margin:1rem 0 2rem;line-height:1.9">Our beta trial proved the concept, validated the technology, and gave us a clear roadmap. We're now ready for commercial launch — with a better product, a proven platform, and real customer insights.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="products.html" class="btn btn-accent">See Our Products</a>
+      <a href="technology.html" class="btn btn-outline" style="border-color:rgba(245,240,232,0.3);color:var(--cream)">Our Technology</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--cream)">Map-Art Store Inc.</div>
+        <p>Bridging distances through intricately designed, personalised geographical engravings &mdash; handcrafted in Winnipeg, Manitoba, Canada.</p>
+        <p class="tagline">"Encapsulating memories through geography."</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="technology.html">Our Technology</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html#diy">DIY Kits</a></li>
+          <li><a href="products.html#premium">Premium Maps</a></li>
+          <li><a href="products.html#corporate">Corporate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="mailto:info@map-artstore.ca">info@map-artstore.ca</a></li>
+          <li><a href="#">Winnipeg, Manitoba</a></li>
+          <li><a href="#">Canada</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Map-Art Store Inc. All rights reserved.</p>
+      <p>Made with ♥ in Winnipeg, Manitoba, Canada</p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>
